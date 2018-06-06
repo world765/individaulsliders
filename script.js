@@ -41,12 +41,6 @@ function labelPosition(a) {
   if (a == "default") {
     traveled = ((slider.value -slider.min)/(slider.max - slider.min));
   }
-  if (a == "buyer") {
-    traveled = ((rebate.value -slider.min)/(slider.max - slider.min));
-  }
-  if  (a == "saller") {
-    traveled = ((savings.value -slider.min)/(slider.max - slider.min));
-  };
   $("." + a + "StagnantLabel").html('<span class = "'+ a +'ValueMin">$200,000</span> <span class = "'+ a +'ValueMax" style = "margin-left:'+(inputSize - 150)+'px ">$2,000,000</span>');
   if (traveled * inputSize <= 100) {
     $("." + a + "ValueMin").addClass("fadeOuts");
